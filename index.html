@@ -6,6 +6,15 @@
         <meta name="author" content="Bianca Reynoso">
         <meta name="description" content="Animal Crossing Wiki">
 		<link href="stylesheet.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+        
         <script async src="myscript.js"></script>
     </head>
     <body>
@@ -15,16 +24,104 @@
                     <li id="leaf"><img src="images/Animal_Crossing_Leaf.svg.png" alt="animal crossing leaf logo"></li>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#temp">Weather</a></li>
                     <li><a href="#villagers">Villagers</a></li>
-                    <li><a href="#widgets">Widgets</a></li>
+                    <li><a href="#appendString">Game List</a></li>
                 </ul>
             </nav>
             <h1 id="home">Animal Crossing Wiki</h1>
             <p><i>A fan-made website created to discuss the Animal Crossing series</i></p>
         </header>
         <main>
-            
+            <section id="split">
+                <section id="imgshow">
+                    <div class="fotorama"
+                        data-autoplay="5000"
+                        data-loop="true"
+                        data-shuffle="true"
+                        data-fit="contain"
+                        data-width="150px"
+                        data-height="150px">
+                        <img src="images/Animal_Crossing.webp" alt="Animal Crossing box art">
+                        <img src="images/Animal_Crossing_Wild_World.webp" alt="Animal Crossing Wild World box art">
+                        <img src="images/Cityfolkbox.webp" alt="Animal Crossing City Folk box art">
+                        <img src="images/North_America_New_Leaf_box-art.webp" alt="Animal Crossing New Leaf box art">
+                        <img src="images/Amiibo_Festival_NA_Boxart.webp" alt="Amiibo Festival box art">
+                        <img src="images/Animal-crossing-new-horizons.webp" alt="Animal Crossing New Horizons box art">
+                    </div>
+                </section>
+                <section id="aboutSec">
+                    <h2 id="about">About</h2>
+                    <p>Animal Crossing is a social simulation video game series developed and published by Nintendo. The series was conceptualized and created by Katsuya Eguchi and Hisashi Nogami.</p>
+                    <p>In the Animal Crossing games, the player assumes the role of a human character who moves into a rural village populated with anthropomorphic animals and lives there indefinitely. Gameplay is open-ended: players have no defined objectives but are instead encouraged to spend their time in the village performing any number of activities which include collecting items, planting plants, insect catching, fishing, and socializing with the village's residents. Animal Crossing games are played in real-time, utilizing the video game console's internal clock and calendar. Thus, the passage of time in the game world reflects that in reality, as well as the current season and time of day. Some in-game events, such as holidays or the growth of a tree, occur at certain times or require some duration of time to have passed.</p>
+                    <img src="images/NSwitch_AnimalCrossingNewHorizons_Overview_Gataway_Chars_Mob.png" alt="Timmy and Tommy">
+                </section>
+            </section>
+            <section id="weatherSec">
+                <h2 id="temp">Weather</h2>
+                <p>Animal Crossing follows the internal clock of your device as well as your local weather. To see the current weather of your island/town, click below!</p>
+                <img src="images/Celeste_NH.webp" alt="Celeste the owl" id="celeste">
+                <form>
+                    <input type="submit" name="mySubmit" id="mySubmit" value="View My Local Weather">
+                </form>
+                <section id="weather" class="hidden"></section>
+            </section>
+            <section id="villagersSec">
+                <h2 id="villagers">Villagers</h2>
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#joey">Joey</a></li>
+                        <li><a href="#pietro">Pietro</a></li>
+                        <li><a href="#judy">Judy</a></li>
+                    </ul>
+                    <div id="joey">
+                        <h3>Joey</h3>
+                        <p>Joey is a yellow duck with thick, dark-gray eyebrows, small dot eyes, an orange beak, and no hair. He wears a sumo loincloth, possibly due to his apparent goal of being a sumo wrestler in Animal Crossing: New Leaf.</p>
+                        <p>As a lazy villager, Joey has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In New Horizons, Joey goes to sleep at 11 PM and wakes up at 8 AM.</p>
+                        <img src="images/300px-Joey_NH.png" alt="Joey Animal Crossing render">
+                    </div>
+                    <div id="pietro">
+                        <h3>Pietro</h3>
+                        <p>Pietro is a smug sheep villager in the Animal Crossing series. He first appeared in Animal Crossing: New Leaf and has appeared in all subsequent games. His name is derived from "pied," which means having a bright and multicolored patchwork appearance, referencing the color of his wool, or from "Pierrot" referencing his clown-like appearance. Similarly, his catchphrase is "honk honk," a common noise associated with clowns, also referring to his bulbous nose. His Japanese catchphrase, "gufufu," is a Japanese onomatopoeia for laughter.</p>
+                        <p>Pietro is a smug villager, meaning he will come off as a polite gentleman, though also arrogant and conceited. If the player is female, he will occasionally flirt with them. He wakes up at 8:30 AM.</p>
+                        <img src="images/300px-Pietro_NH.png" alt="Pietro Animal Crossing render">
+                    </div>
+                    <div id="judy">
+                        <h3>Judy</h3>
+                        <p>Judy is a bear cub with light blue and pastel pink coloration on her fur that fades together, a white face and rosy cheeks, with a small black nose, a letter v-shaped mouth, pale cream coloration inside her ears, white paw pads on her feet, and a white tail. Her eyelids are sky blue, and she has three thick black eyelashes on each eye, making it appear as if she is wearing light blue eyeshadow and mascara. Each of her dark purple eyes possesses a pupil shaped like a large four-pointed star and two tiny white ovals at a top and bottom corner, making her eyes look shiny or sparkly. When she's shocked, however, her eyes turn white with a small dark purple iris and black pupil in each eye, and also gains wrinkles around her eyes. Her eyelids do not appear to fully close when she is happy, with two white ovals shining through the black outline between the eyelids.</p>
+                        <p>Judy has a snooty personality. She will appear uptown, classy, and chic. With this, she will appear rude, belittling and snobbish when talking to others, usually criticizing their dress sense or fashion. She is able to get on with cranky, big sister, smug, and other snooty villagers. She will have her fitness questioned by a jock villager. She will not get along with normal villagers, due to their kindness and politeness towards their neighbors.</p>
+                        <img src="images/Judy_NH.png" alt="Judy Animal Crossing render">
+                    </div>
+                </div>
+            </section>
+            <section id="appendString">
+                <h2>Game List</h2>
+                <p>You can create a stored list here and come back to it later. Create a list of Animal Crossing games you plan to play and check them off when you try them!</p>
+                <img src="images/AC_Isabelle_7XU6aGu.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png" alt="Isablle fall outfit">
+                <form>
+                    <label for="item">Enter an Game to Add to Your List:</label>
+                    <span class="message">Please enter a game's name and submit again</span>
+                    <input type="text" name="item" id="item" class="enter">
+                    <input type="submit" name="itemSubmit" id="itemSubmit" value="Add to List">
+                </form>
+                <strong class="hidden">Game List</strong>
+                <ul id="todoList"></ul>
+            </section>
+            <div id="modal" class="hidden">
+                <div id="inner-modal">
+                    <p></p>
+                    <button id="confirm">Yes, Remove From List</button>
+                    <button id="cancel">No, Do Not Remove From List</button>
+                </div>
+            </div>
         </main>
+        <footer>
+            <p>Copyright &copy; 2024 Nintendo Animal Crossing - All Rights Reserved</p>
+            <div>
+                <p><a href="#">Privacy Statement</a></p>
+                <p><a href="#">Terms of Service</a></p>
+            </div>
+            <p><i>This site is for educational purposes only.</i></p>
+        </footer>
     </body>
 </html>
